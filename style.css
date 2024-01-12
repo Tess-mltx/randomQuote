@@ -1,0 +1,55 @@
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: #f5f5f5;
+  color: #444;
+}
+
+.main {
+  text-align: center;
+  padding: 24px;
+}
+
+.main-sectionQuote-title {
+  color: #d63a6d;
+  margin-bottom: 20px;
+}
+
+.main-sectionQuote-dataContainer {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.main-sectionQuote-dataContainer-blockquote {
+  font-size: 18px;
+  font-style: italic;
+  color: #444;
+  border-left: 4px solid #d63a6d;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.main-sectionQuote-dataContainer-blockquote-author {
+  font-size: 16px;
+  color: #999;
+}
+
+.main-sectionQuote-dataContainer-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.main-sectionQuote-dataContainer-footer-picture {
+  border-radius: 50px;
+  max-width: 200px;
+  max-height: 300px;
+}
+
+.main-sectionQuote-dataContainer-footer-totalQuote {
+  font-size: 14px;
+  color: #999;
+}/*# sourceMappingURL=style.css.map */
