@@ -1,5 +1,5 @@
 const randomQuoteAPI = "https://thatsthespir.it/api"
-const cocktailsAPI = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+const cocktailsAPI = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f="
 const randomQuoteBtn = document.getElementById('randomQuoteBtn')
 
 // function randomQuote() {
@@ -38,8 +38,9 @@ async function v2RandomQuote() {
         let response = await fetch(randomQuoteAPI);
         let data = await response.json();
 
-        let id = data.id
-        let favCocktail = await assignCocktail(id);
+        let author = data.author;
+        let firstletter = author[0];
+        let favCocktail = await assignCocktail(firstletter);
 
         displayRandomQuote(data, favCocktail);
 
@@ -49,11 +50,12 @@ async function v2RandomQuote() {
     }
 }
 
-async function assignCocktail(id) {
+async function assignCocktail(letter) {
     try {
-        let response = await fetch(cocktailsAPI + id);
+        let response = await fetch(cocktailsAPI + letter);
         let data = await response.json();
-        let favDrink = data.strDrink;
+        console.log(data);
+        let favDrink = data.drinks[0].strDrink;
         return(favDrink)
 
     }
