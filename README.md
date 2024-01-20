@@ -19,8 +19,8 @@ Pour utiliser l'application, suivez ces étapes :
 
 ### Captures d'écran
 ***
-![L'app au chargement](./img/WeatherApp-DarkMode.png)
-![l'app apres le click](./img/WeatherApp-LightMode.png)
+![L'app au chargement](./assets/randomQuoteBefore.png)
+![l'app apres le click](./assets/randomQuoteAfter.png)
 
 ## Technologies
 ***
