@@ -30,7 +30,11 @@ function displayRandomQuote(data, favDrink) {
     authorDsp.textContent = authorData;
     pictureDsp.setAttribute("src", pictureData);
     totalQuoteDsp.textContent = `${totalQuoteData} quotes`
-    favDrinkDsp.textContent = `His favorite cocktail is : ${favDrink}`
+    favDrinkDsp.textContent = `At this instant, de drink on the table was : ${favDrink}`
+
+    let datacontainer = document.querySelector('.main-sectionQuote-dataContainer');
+    datacontainer.style.display = 'flex';
+    
 }
 
 async function v2RandomQuote() {
@@ -54,7 +58,8 @@ async function assignCocktail(letter) {
     try {
         let response = await fetch(cocktailsAPI + letter);
         let data = await response.json();
-        console.log(data);
+        // console.log(data);
+        
         let favDrink = data.drinks[0].strDrink;
         return(favDrink)
 
